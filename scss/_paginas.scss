@@ -1,0 +1,20 @@
+.feriado,
+.adm {
+  font-size: 1.8rem;
+  text-align: center;
+  
+  .btn { // talvez mover para componentes
+    &:first-child {
+      margin-right: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-pequeno) {
+      display: block;
+      
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}

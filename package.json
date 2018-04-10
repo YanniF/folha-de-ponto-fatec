@@ -1,0 +1,22 @@
+{
+  "name": "folha-de-ponto",
+  "version": "1.0.0",
+  "description": "Gerador de folha de ponto para o RH da Fatec PG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Me",
+    "dê",
+    "um",
+    "emprego"
+  ],
+  "author": "Yanni Fraga",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
