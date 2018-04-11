@@ -31,4 +31,9 @@ $bp-pequeno: 37.5em;    // 600px
   color: inherit;
   border: 1px solid $cor-clara;
   border-radius: 3px;
+
+  &:focus {
+    border-color: $cor-primaria;
+    box-shadow: 0 0 3px $cor-primaria;
+  }
 }

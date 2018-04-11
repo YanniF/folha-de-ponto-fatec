@@ -61,6 +61,7 @@ main {
       width: 2rem;
       top:0;
       right:0;
+      border-color: $cor-primaria;
       cursor: pointer;
       transition: width .3s;
 
@@ -73,12 +74,12 @@ main {
       position: absolute;
       right: 1rem;
       top: .8rem;
-      color: darken($cor-clara, 20%);
+      color: lighten($cor-primaria, 10%);
       cursor: pointer;
       transition: all .3s;
 
       &:hover {
-        color: $cor-texto;
+        color: $cor-primaria;
       }
     }
   }
@@ -140,7 +141,7 @@ main {
   }
 
   @media only screen and (max-width: $bp-pequeno) {
-    width: 85%;    
+    width: 85%;
   }
 
   &-header {
@@ -173,8 +174,17 @@ main {
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: $bp-pequeno) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     &:last-child {
       justify-content: space-around;
+
+      @media only screen and (max-width: $bp-pequeno) {
+        flex-direction: row;
+      }
     }
   }
 
@@ -184,6 +194,11 @@ main {
     width: 20%;
     text-align: right;
     font-weight: 600;
+
+    @media only screen and (max-width: $bp-pequeno) {
+      text-align: left;
+      width: 100%;
+    }
   }
 
   &-input,
@@ -195,12 +210,20 @@ main {
   &-input,
   &-select-info {
     width: 70%;
+
+    @media only screen and (max-width: $bp-pequeno) {
+      width: 90%;
+    }
   }
 
   &-data {
     display: flex;
     justify-content: space-between;
     width: 74%;
+
+    @media only screen and (max-width: $bp-pequeno) {
+      width: 95%;
+    }
 
     & > * {
       width: 33.33%;
