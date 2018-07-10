@@ -28,6 +28,10 @@
     z-index: 5;
   }
 
+  &-add {
+    @include botao($cor-primaria);  
+  }
+
   &-editar {
     @include botao($cor-btn-editar);  
   }
@@ -155,6 +159,11 @@ main {
       display: inline-block;
     }
   }
+  
+  &-body { // barra de rolagem
+    max-height: calc(100vh - 10rem);
+    overflow-y: auto;
+  }
 
   .btn-fechar {
     font-size: 2.5rem;
@@ -184,6 +193,18 @@ main {
 
       @media only screen and (max-width: $bp-pequeno) {
         flex-direction: row;
+      }
+    }
+
+    &.checkbox { // administrativos
+      @media only screen and (max-width: $bp-pequeno) {
+        flex-direction: row; 
+      }
+  
+      label {
+        margin-left: .5rem;
+        text-align: left;
+        cursor: pointer;
       }
     }
   }
@@ -235,6 +256,19 @@ main {
     }
   }
   
+  td { // horário dos professores
+    width: 30%;
+    text-align: center;
+
+    &:last-child {
+      width: 10%;
+    }
+
+    .modal-select {
+      width: 75%;
+    }
+  }
+
   .btn-modal {
     padding: 1rem 1.5rem;
     color: $cor-branca;
