@@ -216,7 +216,7 @@ main {
     }
   }
 
-  &-data {
+  &-data { // feriado
     display: flex;
     justify-content: space-between;
     width: 74%;
@@ -225,7 +225,7 @@ main {
       width: 95%;
     }
 
-    & > * {
+    & > *  {
       width: 33.33%;
       margin-right: 1rem;
     }

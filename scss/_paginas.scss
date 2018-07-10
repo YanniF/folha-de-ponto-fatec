@@ -4,8 +4,8 @@
   text-align: center;
   
   .btn { // talvez mover para componentes
-    &:first-child {
-      margin-right: 2rem;
+    &:not(:first-child) {
+      margin-left: 2rem;
     }
 
     @media only screen and (max-width: $bp-pequeno) {

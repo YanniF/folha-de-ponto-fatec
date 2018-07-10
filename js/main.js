@@ -1,16 +1,37 @@
-let pesquisarInput = document.getElementById('pesquisar-input');
-let modal = document.getElementById('modal-wrapper');
+const modal = document.getElementById('modal-wrapper');
+const pesquisarInput = document.getElementById('pesquisar-input');
+const pesquisarIcon = document.getElementById('pesquisar-icon');
+
+//---  PESQUISAR  ---//
 
 // clica no span que envolve o ícone para focar no input, aumentando o tamanho
-document.getElementById('pesquisar-icon').addEventListener('click', function() {
+pesquisarIcon.addEventListener('click', function() {
   pesquisarInput.focus();
 });
 
+// clica fora do input, limpa o campo
 pesquisarInput.addEventListener('blur', function() {
   pesquisarInput.value = "";
 });
 
-document.getElementById('btn-cadastrar-feriado').addEventListener('click', function() {
+pesquisarInput.addEventListener('keyup', function(e) {
+  const texto = e.target.value.toLowerCase();
+
+  document.querySelectorAll('.tabela-item').forEach((linha) => {
+    const item = linha.cells[0].textContent;
+
+    if(item.toLowerCase().indexOf(texto) != -1) {
+      linha.style.display = 'block';
+    }
+    else {
+      linha.style.display = 'none';
+    }
+  })
+});
+
+
+//--- MODAL ---//
+document.getElementById('btnMostrarModal').addEventListener('click', function() {
   modal.classList.add('flex');
   modal.classList.remove('hidden');
 });
