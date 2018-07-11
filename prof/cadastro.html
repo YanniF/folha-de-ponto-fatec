@@ -93,17 +93,18 @@
             <input type="text" name="curso" id="curso" placeholder="Curso" class="modal-input" required>
           </div> 
           <div class="form-group">
-            <label for="carga">Carga Horária</label>
+            <label for="carga">Carga </label>
             <input type="number" name="carga" id="carga" placeholder="Carga horária" class="modal-input" min="0" required>
           </div>
           <div class="form-group">
             <table>
               <thead>
                 <th>Dia</th>
-                <th>Ent.</th>
+                <th>Entrada</th>
                 <th>Saída</th>
+                <th><button id="btnAddLinha" class="btn btn-add" title="Adicionar novo horário"><i class="fas fa-plus"></i></button></th>
               </thead>
-              <tbody>
+              <tbody id="horario">
                 <tr>
                   <td>
                     <select name="dia" id="dia" class="modal-select">
@@ -116,13 +117,13 @@
                     </select>
                   </td>
                   <td>
-                    <input type="text" class="modal-input">
+                    <input type="time" class="modal-input" name="entrada">
                   </td>
                   <td>
-                    <input type="text" class="modal-input">
+                    <input type="time" class="modal-input" name="saida">
                   </td>
                   <td>
-                    <button class="btn btn-add" title="Adicionar novo horário"><i class="fas fa-plus"></i></button>
+                    <a href="#" class="btn btn-apagar delete" title="Apagar horário"><i class="fas fa-trash-alt"></i></a>
                   </td>
                 </tr>
               </tbody>

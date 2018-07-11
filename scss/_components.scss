@@ -256,6 +256,7 @@ main {
     }
   }
   
+  th,
   td { // horário dos professores
     width: 30%;
     text-align: center;
@@ -266,6 +267,10 @@ main {
 
     .modal-select {
       width: 75%;
+    }
+
+    a {
+      font-size: 1.2rem;
     }
   }
 
